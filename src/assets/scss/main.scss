@@ -1,0 +1,15 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/banner';
+@import 'layout/course';
+
+@import 'components/buttons';
+@import 'components/card';
+
+@import 'pages/home';

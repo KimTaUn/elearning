@@ -1,0 +1,19 @@
+.myBtn{
+    font-size: 1em; //1em = 16px;
+    padding: 0.625em 1em;
+    border: 1px solid black;
+    border-radius: $size-9;
+    background-color: $white;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.myBtn-med{
+    font-size: 150%; 
+}
+
+.myBtn-big{
+    font-size: 200%; 
+}

@@ -1,0 +1,132 @@
+.topnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    padding: $size-6;
+    overflow: hidden;
+    background-color: $grey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+    transition: 0.5s;
+    // margin-bottom: 8vh;
+    &-brand{
+        width: auto;
+        height: 60px;
+        .topnav-item{
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
+    &-search {
+        width: 320px;        
+        position: relative;
+
+        input[type=text]{
+            width: 100%;
+            padding: $size-7;
+            background-color: $grey-300;
+            opacity: 0.8;
+            border: 1px solid $orrange-100;
+            border-radius: $size-9;
+            transition: all .1s ease-in-out;
+
+            &:focus{
+                outline: 0;
+                background-color: $white;
+                border-color: $orrange;
+            }
+        }
+
+        .btn-search{
+            position: absolute;
+            right: $size-8;
+            border: none;
+            background: transparent;
+            height: 100%;
+        }
+    }
+
+    .navLink-item{
+        margin: 0 $size-6;
+        font-size: 1em;
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: $black;
+        transition: all .1s ease-in;
+    }
+
+    &-collapse{
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &-menu{
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        .navLink-item{
+            // margin: 0 $size-6;
+            // font-size: 1em;
+            // text-decoration: none;
+            // letter-spacing: 3px;
+            // color: $black;
+            // transition: all .1s ease-in;
+
+            &:hover{
+                color: $orrange;
+            }
+        }
+    }
+
+    &-right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
+
+        .avatar{
+            height: 40px;
+            width: 40px;
+            border: 1px solid $black;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 8px;
+        }
+
+        .btn-login{
+
+            &:hover{
+                background-color: $grey-100;
+                color: $white;
+                border-color: transparent;
+            }
+
+            &:focus{
+                background-color: $grey-200;
+                color: $white;
+                border-color: transparent;
+            }
+        }
+    }
+
+    .btn-toggle{
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px){
+    .topnav{
+        .btn-toggle{
+            display: block;
+        }
+    }
+}
